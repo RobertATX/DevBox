@@ -1,23 +1,35 @@
-from ubuntu:14.04
+############################################################
+# Dockerfile
+# Based on Ubuntu
+# This is the Dev Build
+############################################################
+
+# Set the base image to Ubuntu
+FROM ubuntu:wily
+
+# File Author / Maintainer
+MAINTAINER Robert Donovan <admin@mixfin.com>
 
 run apt-get update -y
 run apt-get install -y mercurial
 run apt-get install -y git
-run apt-get install -y python
 run apt-get install -y curl
-run apt-get install -y vim
-run apt-get install -y strace
-run apt-get install -y diffstat
-run apt-get install -y pkg-config
-run apt-get install -y cmake
+#run apt-get install -y vim
+#run apt-get install -y strace
+#run apt-get install -y diffstat
+r#un apt-get install -y pkg-config
+#run apt-get install -y cmake
 run apt-get install -y build-essential
 run apt-get install -y tcpdump
 run apt-get install -y screen
 
-# Install go
-run curl https://go.googlecode.com/files/go1.2.1.linux-amd64.tar.gz | tar -C /usr/local -zx
-env GOROOT /usr/local/go
-env PATH /usr/local/go/bin:$PATH
+# Install Python
+run apt-get install -y python
+run apt-get install -y python-dev
+run apt-get install -y python-setuptools
+
+# Install mySQL
+run apt-get install -y libmysqlclient-dev
 
 # Setup home environment
 run useradd dev
