@@ -17,7 +17,7 @@ run apt-get install -y curl
 #run apt-get install -y vim
 #run apt-get install -y strace
 #run apt-get install -y diffstat
-r#un apt-get install -y pkg-config
+#run apt-get install -y pkg-config
 #run apt-get install -y cmake
 run apt-get install -y build-essential
 run apt-get install -y tcpdump
