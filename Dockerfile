@@ -36,9 +36,9 @@ run useradd dev
 run mkdir /home/dev && chown -R dev: /home/dev
 run mkdir -p /home/dev/go /home/dev/bin /home/dev/lib /home/dev/include
 env PATH /home/dev/bin:$PATH
-env PKG_CONFIG_PATH /home/dev/lib/pkgconfig
+#env PKG_CONFIG_PATH /home/dev/lib/pkgconfig
 env LD_LIBRARY_PATH /home/dev/lib
-env GOPATH /home/dev/go:$GOPATH
+#env GOPATH /home/dev/go:$GOPATH
 
 # Create a shared data volume
 # We need to create an empty file, otherwise the volume will
@@ -51,8 +51,8 @@ volume /var/shared
 
 workdir /home/dev
 env HOME /home/dev
-add vimrc /home/dev/.vimrc
-add vim /home/dev/.vim
+#add vimrc /home/dev/.vimrc
+#add vim /home/dev/.vim
 add bash_profile /home/dev/.bash_profile
 add gitconfig /home/dev/.gitconfig
 
