@@ -1,4 +1,4 @@
-FROM jqworker
+FROM ubuntu:wily
 
 # Get supervisor to control multiple processes, sshd to allow connections.
 # And supervisor-stdout allows us to send the output to the main docker output.
