@@ -1,0 +1,10 @@
+jqworker: &WORKER
+  image: worker
+  privileged: true
+  stdin_open: true
+  detach: true
+  tty: true
+  volumes:
+    <<: *VOLUMES
+  ports:
+    - "7722:22"
