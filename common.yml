@@ -1,0 +1,5 @@
+webapp:
+  build: ./webapp
+  environment:
+    - DEBUG=false
+    - SEND_EMAILS=false
